@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'mercury', to: 'mercury#index'
       post 'mercury/connect-users', to: 'mercury#connect_users'
+      post 'mercury/connect-users-whatsapp', to: 'mercury#connect_users_whatsapp'
       get 'conversations/:sid', to: 'conversation#get'
       post 'conversations', to: 'conversation#delete'
       get 'conversations', to: 'conversation#get_all_and_delete'

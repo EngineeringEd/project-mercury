@@ -13,6 +13,12 @@ class Api::V1::MercuryController < ApplicationController
     render json: {test: 'it did the thing'}, status: :ok
   end
 
+  def connect_users_whatsapp
+    Conversation.create_conversation_for_users_whatsapp(convo_params)
+
+    render json: {test: 'it did the thing'}, status: :ok
+  end
+
   private
 
   def convo_params
