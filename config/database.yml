@@ -12,11 +12,12 @@ default: &default
 development:
   adapter: postgresql
   encoding: UTF-8
-  database: <%= ENV.fetch("POSTGRES_DB") %>
+  url: <%= ENV.fetch("DATABASE_URL") %>
+  # database: <%= ENV.fetch("POSTGRES_DB") %>
   pool: 5
-  username: <%= ENV.fetch("POSTGRES_USER") %>
-  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
-  host: <%= ENV.fetch("DB_HOST", "127.0.0.1") %>
+  # username: <%= ENV.fetch("POSTGRES_USER") %>
+  # password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
+  # host: <%= ENV.fetch("DB_HOST", "127.0.0.1") %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
