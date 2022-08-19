@@ -28,8 +28,8 @@ test:
 production:
   adapter: postgresql
   encoding: UTF-8
-  database: <%= ENV.fetch("POSTGRES_DB") %>
-  pool: 5
-  username: <%= ENV.fetch("POSTGRES_USER") %>
+  database: project-mercury-prod
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: project-mercury
   password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
 

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root 'welcome#index'
 
   namespace :api, constraint: { format: 'json' } do
     namespace :v1 do
