@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  namespace :api do
+  namespace :api, constraint: { format: 'json' } do
     namespace :v1 do
       post 'mercury', to: 'mercury#index'
+      post 'mercury/connect-users', to: 'mercury#connect_users'
+      get 'conversations/:sid', to: 'conversation#get'
     end
   end
 end
