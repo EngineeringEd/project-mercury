@@ -6,7 +6,7 @@ class Conversation < ApplicationRecord
   class << self
     def create_conversation_for_users(convo_params)
       conversation = create_client.conversations.v1.conversations
-        .create(friendly_name: "Conversation for booking #{convo_params.booking_id}")
+        .create(friendly_name: "Conversation for booking #{convo_params.fetch('booking_id')}")
 
       add_user_to_conversation_as_sms(conversation.sid, convo_params.fetch('driver_number'))
       add_user_to_conversation_as_chat(conversation.sid)
@@ -15,10 +15,10 @@ class Conversation < ApplicationRecord
         sid: conversation.sid,
         chat_sid: conversation.chat_service_sid,
         messaging_sid: conversation.messaging_service_sid,
-        driver_number: convo_params.driver_number,
-        owner_number: convo_params.owner_number,
-        friendly_name: "Conversation for booking #{convo_params.booking_id}",
-        booking_id: convo_params.booking_id
+        driver_number: convo_params.fetch('driver_number'),
+        owner_number: convo_params.fetch('owner_number'),
+        friendly_name: "Conversation for booking #{convo_params.fetch('booking_id')}",
+        booking_id: convo_params.fetch('booking_id')
       )
     end
 

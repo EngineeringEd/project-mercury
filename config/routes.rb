@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       post 'mercury', to: 'mercury#index'
       post 'mercury/connect-users', to: 'mercury#connect_users'
       get 'conversations/:sid', to: 'conversation#get'
+      post 'conversations', to: 'conversation#delete'
+      get 'conversations', to: 'conversation#get_all_and_delete'
     end
   end
 end
