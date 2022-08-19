@@ -1,3 +1,5 @@
-class ApplicationController < ActionController::Base
+# typed: true
+
+class ApplicationController < ActionController::API
 
 end
