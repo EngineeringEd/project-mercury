@@ -1,0 +1,17 @@
+---
+include:
+- "app/**/*.rb"
+exclude:
+- vendor/**/*
+- ".bundle/**/*"
+- "sorbet/**/*.rb"
+require:
+  - actioncable
+  - actionmailer
+  - actionpack
+  - actionview
+  - activejob
+  - activemodel
+  - activerecord
+  - activestorage
+  - rspec-rails

@@ -1,0 +1,7 @@
+--dir
+.
+--ignore=vendor/
+--ignore=Gemfile
+--ignore=Gemfile.lock
+--ignore=Rakefile
+--ignore=spec/

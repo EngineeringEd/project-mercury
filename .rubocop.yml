@@ -1,0 +1,14 @@
+require:
+  - 'rubocop-rails'
+
+# disable all the popo
+AllCops:
+  DisabledByDefault: true
+
+# Don't really want annoying comments on top of my files. Sigs are enough
+Style/Documentation:
+  Enabled: false
+
+# Don't really need these comments anymore
+Style/FrozenStringLiteralComment:
+  Enabled: false
