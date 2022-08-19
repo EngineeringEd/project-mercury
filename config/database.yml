@@ -30,6 +30,7 @@ production:
   encoding: UTF-8
   database: project-mercury-prod
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: project-mercury
-  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
+  url: <%= ENV.fetch("DATABASE_URL") %>
+  # username: project-mercury
+  # password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
 
