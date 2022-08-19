@@ -21,7 +21,8 @@ class Api::V1::ConversationController < ApplicationController
     convos = Conversation.create_client.conversations.v1.conversations.list(limit: 10)
 
     convos.each do |convo|
-      Conversation.create_client.conversations.v1.conversations(convo.sid).delete
+      Conversation.create_client.conversations
+        .v1.conversations(convo.sid).delete
     end
 
     Conversation.delete_all
