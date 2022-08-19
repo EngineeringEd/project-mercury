@@ -10,7 +10,7 @@ gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
 gem 'pg'
 gem 'twilio-ruby', '~> 5.70.1'
 
@@ -69,6 +69,7 @@ group :development do
   # gem "spring"
   gem 'ruby-lsp', require: false
   gem 'solargraph', require: false
+  gem 'sqlite3', '~> 1.4'
 end
 
 gem 'dalli', '~> 2.7', '>=2.7'
